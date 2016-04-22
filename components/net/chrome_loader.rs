@@ -7,15 +7,19 @@ use mime_classifier::MIMEClassifier;
 use net_traits::{LoadConsumer, LoadData, NetworkError};
 use resource_thread::{CancellationListener, send_error};
 use std::sync::Arc;
+use url::percent_encoding::percent_decode;
 use url::Url;
 use util::resource_files::resources_dir_path;
 
 pub fn resolve_chrome_url(url: &Url) -> Result<Url, ()> {
     assert_eq!(url.scheme(), "chrome");
+    if url.host_str() != Some("resources") {
+        return Err(())
+    }
     let resources = resources_dir_path();
     let mut path = resources.clone();
     for segment in url.path_segments().unwrap() {
-        path.push(segment)
+        path.push(&*try!(percent_decode(segment.as_bytes()).decode_utf8().map_err(|_| ())))
     }
     // Don't allow chrome URLs access to files outside of the resources directory.
     if !(path.starts_with(resources) && path.exists()) {
