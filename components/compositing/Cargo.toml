@@ -32,7 +32,7 @@ url = {version = "1.2", features = ["heap_size"]}
 util = {path = "../util"}
 
 [dependencies.webrender]
-git = "https://github.com/servo/webrender"
+path = "../../../webrender"
 default-features = false
 features = ["serde_macros"]
 

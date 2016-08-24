@@ -45,7 +45,7 @@ dependencies = [
  "util 0.0.1",
  "util_tests 0.0.1",
  "webdriver_server 0.0.1",
- "webrender 0.2.0 (git+https://github.com/servo/webrender)",
+ "webrender 0.2.0",
  "webrender_traits 0.3.0 (git+https://github.com/servo/webrender_traits)",
 ]
 
@@ -330,7 +330,7 @@ dependencies = [
  "time 0.1.35 (registry+https://github.com/rust-lang/crates.io-index)",
  "url 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "util 0.0.1",
- "webrender 0.2.0 (git+https://github.com/servo/webrender)",
+ "webrender 0.2.0",
  "webrender_traits 0.3.0 (git+https://github.com/servo/webrender_traits)",
 ]
 
@@ -2591,7 +2591,6 @@ dependencies = [
 [[package]]
 name = "webrender"
 version = "0.2.0"
-source = "git+https://github.com/servo/webrender#16e427ec2955f0a5f47b279a30b48eaa885d57fb"
 dependencies = [
  "app_units 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "bit-set 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -2607,7 +2606,7 @@ dependencies = [
  "log 0.3.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "num-traits 0.1.32 (registry+https://github.com/rust-lang/crates.io-index)",
  "offscreen_gl_context 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "scoped_threadpool 0.1.7 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rayon 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "time 0.1.35 (registry+https://github.com/rust-lang/crates.io-index)",
  "webrender_traits 0.3.0 (git+https://github.com/servo/webrender_traits)",
 ]

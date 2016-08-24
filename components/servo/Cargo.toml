@@ -75,7 +75,7 @@ util = {path = "../util"}
 webdriver_server = {path = "../webdriver_server", optional = true}
 
 [dependencies.webrender]
-git = "https://github.com/servo/webrender"
+path = "../../../webrender"
 default-features = false
 features = ["serde_macros"]
 
